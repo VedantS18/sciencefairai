@@ -1,5 +1,4 @@
 name: Deploy React App
-
 on:
   push:
     branches: [ main ]
@@ -9,18 +8,17 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
-
+      
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-
+          
       - name: Install dependencies
         run: npm install
-
+        
       - name: Build
         run: npm run build
         env:
@@ -30,10 +28,11 @@ jobs:
           VITE_OPENAI_ASSISTANT_ID: ${{ secrets.VITE_OPENAI_ASSISTANT_ID }}
           VITE_RESEARCH_EMAIL_API_KEY: ${{ secrets.VITE_RESEARCH_EMAIL_API_KEY }}
           VITE_RESEARCH_EMAIL_ASSISTANT_ID: ${{ secrets.VITE_RESEARCH_EMAIL_ASSISTANT_ID }}
-
+          
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+          cname: vedants18.github.io
