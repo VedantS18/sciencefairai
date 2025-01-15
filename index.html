@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/sciencefairai/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Science Fair AI</title>
     <script type="text/javascript">
@@ -20,9 +20,19 @@
         }
       }(window.location))
     </script>
+    <!-- Handle GitHub Pages basename -->
+    <script type="text/javascript">
+      (function() {
+        const { pathname } = window.location;
+        const baseUrl = '/sciencefairai/';
+        if (pathname === baseUrl) {
+          window.history.replaceState(null, null, pathname);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="./src/main.tsx"></script>
   </body>
 </html>
