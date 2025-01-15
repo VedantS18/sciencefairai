@@ -24,6 +24,10 @@ jobs:
       - name: Build
         run: npm run build
         env:
+          VITE_OPENAI_API_KEY: ${{ secrets.VITE_OPENAI_API_KEY }}
+          VITE_GOOGLE_API_KEY: ${{ secrets.VITE_GOOGLE_API_KEY }}
+          VITE_GOOGLE_CX: ${{ secrets.VITE_GOOGLE_CX }}
+          VITE_OPENAI_ASSISTANT_ID: ${{ secrets.VITE_OPENAI_ASSISTANT_ID }}
           VITE_RESEARCH_EMAIL_API_KEY: ${{ secrets.VITE_RESEARCH_EMAIL_API_KEY }}
           VITE_RESEARCH_EMAIL_ASSISTANT_ID: ${{ secrets.VITE_RESEARCH_EMAIL_ASSISTANT_ID }}
 
