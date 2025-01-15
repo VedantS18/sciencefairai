@@ -23,7 +23,6 @@ const MentorFinder: React.FC = () => {
 
   const [isSearching, setIsSearching] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
-  const [generatedEmail] = useState<string>(''); // New state
   const [allMentors, setAllMentors] = useState<MentorSearchResult[]>([]);
   const [searchResults, setSearchResults] = useState<MentorSearchResult[]>([]);
   const [selectedMentor, setSelectedMentor] = useState<MentorSearchResult | null>(null);
