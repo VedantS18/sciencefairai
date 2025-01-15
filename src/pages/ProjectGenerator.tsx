@@ -61,6 +61,7 @@ const ProjectGenerator: React.FC = () => {
     }
   };
 
+  
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="absolute top-4 right-4">
