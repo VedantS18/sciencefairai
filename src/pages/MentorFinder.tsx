@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import DarkModeToggle from '../components/ui/DarkModeToggle';
 import { searchMentors, type MentorSearchResult } from '../services/mentorFinder';
 import EmailTemplateGenerator from '../components/EmailTemplateGenerator';
-import PDFParser from 'pdf-parse'
 
 interface SearchFormData {
   researchInterests: string;
@@ -24,7 +23,7 @@ const MentorFinder: React.FC = () => {
 
   const [isSearching, setIsSearching] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
-  const [generatedEmail, setGeneratedEmail] = useState<string>(''); // New state
+  const [generatedEmail] = useState<string>(''); // New state
   const [allMentors, setAllMentors] = useState<MentorSearchResult[]>([]);
   const [searchResults, setSearchResults] = useState<MentorSearchResult[]>([]);
   const [selectedMentor, setSelectedMentor] = useState<MentorSearchResult | null>(null);
@@ -341,15 +340,7 @@ const MentorFinder: React.FC = () => {
               userResume={userResume}
               onClose={() => setSelectedMentor(null)}
             />
-          )}
-          {/* Optional: Display generated email (you can customize this part) */}
-          {generatedEmail && (
-            <div className="fixed bottom-4 right-4 bg-background p-4 border rounded-lg shadow-lg max-w-md">
-              <h4 className="font-bold mb-2">Generated Email:</h4>
-              <pre className="whitespace-pre-wrap text-sm">{generatedEmail}</pre>
-            </div>
-          )}
-          
+          )}     
         </div>
       </div>
     </div>

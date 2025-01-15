@@ -76,7 +76,7 @@ Task: Generate a personalized, professional research mentorship request email.
       `.trim();
 
       // Add message to thread with error handling
-      const message = await openai.beta.threads.messages.create(
+      await openai.beta.threads.messages.create(
         thread.id,
         { role: 'user', content: contextMessage }
       ).catch(err => {
