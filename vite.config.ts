@@ -8,11 +8,14 @@ export default defineConfig({
     assetsDir: 'assets',
     rollupOptions: {
       output: {
-        entryFileNames: 'assets/[name].[hash].js',
+        entryFileNames: 'assets/[name].js',  // Removed hash for entry files
         chunkFileNames: 'assets/[name].[hash].js',
-        assetFileNames: 'assets/[name].[hash][extname]'
+        assetFileNames: 'assets/[name][extname]'  // Simplified asset naming
       }
     }
   },
-  plugins: [react()]
+  plugins: [react()],
+  server: {
+    port: 3000
+  }
 })
