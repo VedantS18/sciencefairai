@@ -64,22 +64,5 @@ src/
 └── types/         # TypeScript type definitions
 ```
 
-## Contributing
-
-Contributions are welcome! Feel free to:
-
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature/improvement`)
-3. Make your changes
-4. Commit your changes (`git commit -am 'Add new feature'`)
-5. Push to the branch (`git push origin feature/improvement`)
-6. Create a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Contact
-
-Vedant Srinivas - [Your Email]
 Project Link: https://github.com/VedantS18/sciencefairai
