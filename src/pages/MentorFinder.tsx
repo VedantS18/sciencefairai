@@ -287,7 +287,7 @@ const MentorFinder: React.FC = () => {
                       {mentor.email && (
                         <a 
                           href={`mailto:${mentor.email}`}
-                          className="text-primary hover:underline"
+                          className="inline-flex items-center text-primary hover:underline"
                         >
                           Email Directly
                         </a>
@@ -297,16 +297,16 @@ const MentorFinder: React.FC = () => {
                           href={mentor.profileUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-primary hover:underline"
+                          className="inline-flex items-center text-primary hover:underline"
                         >
                           View University Profile
                         </a>
                       )}
                       <button
                         onClick={() => handleGenerateEmail(mentor)}
-                        className="text-primary hover:underline"
+                        className="inline-flex items-center text-primary hover:underline"
                       >
-                        Generate Email Template
+                        Generate Email
                       </button>
                     </div>
                   </div>
