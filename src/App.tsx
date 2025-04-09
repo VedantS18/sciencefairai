@@ -7,7 +7,7 @@ import './index.css';
 
 const App: React.FC = () => {
   return (
-    <Router basename="/sciencefairai">
+    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/project-generator" element={<ProjectGenerator />} />
